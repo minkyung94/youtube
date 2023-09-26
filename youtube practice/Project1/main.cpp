@@ -1,3 +1,22 @@
+// 전 처리기 매크로 구문(#)모든 컴파일 과정 중 제일 먼저 수행
+			   // 이진수 각 자리수
+#define HUNGRY  0x001		// 치환, HUNGRY코드를 1로 치환
+						// #define 구문 쓰는 이유: 1. 가독성, 2.유지 보수적 측면 이점,
+#define THIRSTY 0x002		//16진수: 0xn
+#define TIRED	0x004
+#define FIRE	0x008
+
+#define COLD	0x010
+#define POISON1	0x020
+#define POISON2	0x040
+#define POISON3	0x080
+
+#define COLD	0x100
+#define POISON4	0x200
+#define POISON5	0x400
+#define POISON6	0x800
+
+
 
 
 // 주석 자료형
@@ -152,15 +171,143 @@ int main()
 
 	if (data == 100)
 	{
+		// if가 참인 경우에 수행
+	}
+	else
+	{
+		// if가 거짓인 경우에 수행
+	}
+	
+	//if, else if
+	/*
+	* if, else if
+
+	if ()
+	{
+
+	}
+	else if ()
+	{
+
+	}
+	else if ()
+	{
+
+	}
+	else if ()
+	{
+
+	}
+	else
+	{
 
 	}
 
+	*/
+
+	//swuich case 시 break중요
+
+	int iTest = 10;
+	switch (iTest)
+	{
+	case 10:
+		break;
+
+	case 20:
+		break;
+
+	default:
+		break;
+	}
 	
 
+	if (iTest == 10)	//case 10: break;
+	{
+
+	}
+	else if (iTest == 20)	//case 20: break;
+	{
+
+	}
+	else				//default: break;
+	{
+
+	}
+
+	if (iTest == 10 || iTest == 20 || iTest == 30)	//case 10 case 20 case 30 : break;
+				// 1	or			0				0
+				// 셋 중 하나만 걸려도 참으로 인식
+	{
+
+	}
 
 
 
+	// 삼항연산자 if else 쓰기 번거로워서 간략하게
+	// : ?
+	iTest == 20 ? iTest = 100 : iTest = 200;
+	// 참이면	-> 수행
+	// 거짓이면						-> 수행
+	
+	// 아래 if문이랑 같음. 가독성 문제 생김
 
+	if (iTest == 20)
+	{
+		iTest = 100;
+	}
+	else
+	{
+		iTest = 200;
+	}
+
+
+	// <비트연산자>
+	// 비트 단위로 연산
+			// 비트 쉬프트 << , >>
+
+	unsigned char byte = 1;
+	byte <<= 1; // 0000 0001 -> 0000 0010 (전체에서 2배)
+				// 축약: byte = byte << 1;
+	byte <<= 2; // 4배
+	byte <<= 3; // 8배
+
+	byte >>= 1; // 2^n 나눈 못
+
+
+
+	//강의 11강
+	// <비트 단위 연산 시 쓰이는 기호, 곱(&), 합(|), 반전(~) xor(^)>
+	// 
+			// 곱(&) : 둘다 1인 경우 1 
+			// 합(|) : 둘 중 하나만 1이어도 1
+			// 반전(~) : 각 자리 비트 뒤집어 
+			//				ex) 1101 1010 -> 0010 0101
+			// xor(^) : 2각 자리 비트가 같으면 0, 다르면 1
+			//				ex)	1101 0101 랑
+			//					0010 1010 비교 시
+			//					1111 1111  (다 다르니까 1)		
+
+
+
+	unsigned int iStatus = 0;		// 32bit = 4byte, 경우의 수 2^32
+	
+
+	// <상태 추가>
+	iStatus |= HUNGRY;
+	iStatus |= THIRSTY;
+
+
+	// < 상태 확인>
+	if (iStatus & THIRSTY)
+	{
+		// 지정한 자리에 비트가 1이 있는지
+	}
+
+
+	// <특정 자리 비트 제거>
+	iStatus &= ~THIRSTY; // 구문 암기: 이 비트 빼겠다는 소리
+
+		 
 	return 0;
 
 
