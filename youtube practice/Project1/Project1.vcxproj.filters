@@ -13,6 +13,9 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Source Files\txtmd">
+      <UniqueIdentifier>{56d7af6d-abe6-41b5-8ec8-67c9a37d78fa}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -21,7 +24,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="memo.md">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\txtmd</Filter>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="main01.txt">
+      <Filter>Source Files\txtmd</Filter>
+    </Text>
+    <Text Include="단축키.txt">
+      <Filter>Source Files\txtmd</Filter>
+    </Text>
+    <Text Include="main02.txt">
+      <Filter>Source Files\txtmd</Filter>
+    </Text>
   </ItemGroup>
 </Project>
