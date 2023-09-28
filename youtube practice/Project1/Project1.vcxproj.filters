@@ -1,10 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Source Files">
-      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
-    </Filter>
     <Filter Include="Header Files">
       <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
       <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
@@ -13,29 +9,56 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="Source Files\txtmd">
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Source Files\기타메모">
       <UniqueIdentifier>{56d7af6d-abe6-41b5-8ec8-67c9a37d78fa}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\강의 cpp-&gt;txt">
+      <UniqueIdentifier>{af161cb7-2811-40fc-a260-06aa1d042297}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="memo.md">
+      <Filter>Source Files\기타메모</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="단축키.txt">
+      <Filter>Source Files\기타메모</Filter>
+    </Text>
+    <Text Include="팩토리얼.txt">
+      <Filter>Source Files\기타메모</Filter>
+    </Text>
+    <Text Include="피보나치.txt">
+      <Filter>Source Files\기타메모</Filter>
+    </Text>
+    <Text Include="main_01.txt">
+      <Filter>Source Files\강의 cpp-&gt;txt</Filter>
+    </Text>
+    <Text Include="main_02.txt">
+      <Filter>Source Files\강의 cpp-&gt;txt</Filter>
+    </Text>
+    <Text Include="main_03.txt">
+      <Filter>Source Files\강의 cpp-&gt;txt</Filter>
+    </Text>
+    <Text Include="main_04.txt">
+      <Filter>Source Files\강의 cpp-&gt;txt</Filter>
+    </Text>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="func.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="memo.md">
-      <Filter>Source Files\txtmd</Filter>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <Text Include="main01.txt">
-      <Filter>Source Files\txtmd</Filter>
-    </Text>
-    <Text Include="단축키.txt">
-      <Filter>Source Files\txtmd</Filter>
-    </Text>
-    <Text Include="main02.txt">
-      <Filter>Source Files\txtmd</Filter>
-    </Text>
+    <ClInclude Include="func.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

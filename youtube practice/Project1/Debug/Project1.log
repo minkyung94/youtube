@@ -1,3 +1,4 @@
-﻿  main.cpp
-C:\Users\minba\OneDrive\문서\GitHub\youtube\youtube practice\Project1\main.cpp(30): warning C4717: 'Factorial': recursive on all control paths, function will cause runtime stack overflow
+﻿  func.cpp
+  main.cpp
+  Generating Code...
   Project1.vcxproj -> C:\Users\minba\OneDrive\문서\GitHub\youtube\youtube practice\Debug\Project1.exe

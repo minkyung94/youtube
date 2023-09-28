@@ -1,0 +1,76 @@
+#include <stdio.h>
+
+// 팩토리얼 함수 (반복)
+int Factorial(int _iNum) {
+    int iValue = 1;
+
+    for (int j = 1; j <= _iNum; ++j) {
+        iValue *= j;
+    }
+
+    return iValue;
+}
+
+// 팩토리얼 함수 (재귀)
+int Factorial_Re(int _iNum) {
+    if (1 == _iNum) {
+        return 1;
+    }
+
+    return _iNum * Factorial_Re(_iNum - 1);
+}
+
+// 피보나치 수열 함수 (반복)
+int Fibonacci(int _iNum) {
+    if (1 == _iNum || 2 == _iNum) {
+        return 1;
+    }
+
+    int iPrev1 = 1;
+    int iPrev2 = 1;
+    int iValue = 0;
+
+    for (int i = 0; i < _iNum - 2; ++i) {
+        iValue = iPrev1 + iPrev2;
+        iPrev1 = iPrev2;
+        iPrev2 = iValue;
+    }
+
+    return iValue;
+}
+
+// 피보나치 수열 함수 (재귀)
+int Fibonacci_Re(int _iNum) {
+    if (1 == _iNum || 2 == _iNum) {
+        return 1;
+    }
+
+    return Fibonacci_Re(_iNum - 1) + Fibonacci_Re(_iNum - 2);
+}
+
+int main() {
+    int _iNum;
+    int iValue;
+
+    // 팩토리얼 계산
+    printf("팩토리얼 계산 결과:\n");
+    _iNum = 4;
+    iValue = Factorial(_iNum);
+    printf("%d! (반복) = %d\n", _iNum, iValue);
+
+    _iNum = 10;
+    iValue = Factorial_Re(_iNum);
+    printf("%d! (재귀) = %d\n", _iNum, iValue);
+
+    // 피보나치 수열 계산
+    printf("\n피보나치 수열 계산 결과:\n");
+    _iNum = 7;
+    iValue = Fibonacci(_iNum);
+    printf("피보나치(%d) (반복) = %d\n", _iNum, iValue);
+
+    _iNum = 8;
+    iValue = Fibonacci_Re(_iNum);
+    printf("피보나치(%d) (재귀) = %d\n", _iNum, iValue);
+
+    return 0;
+}

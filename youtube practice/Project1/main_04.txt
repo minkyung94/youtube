@@ -1,0 +1,58 @@
+// 강의 21화~
+// 구조체, 
+
+
+#include <stdio.h>
+
+// 구조체 =  struct
+
+// 사용자 정의 자료형
+	/* 내 마음대로 나만의 자료형 커스텀 
+		int a; float f; 해당 자료형 내부는 변수 선언x, 
+		내부는 이렇게 구성 돼 있다는 단순 정의, 실체 없음
+	*/ 
+typedef struct _tagMyST
+// type define
+{
+	int		a;
+	float	f;
+}MYST;
+
+typedef struct _tagBig
+{
+	MYST k;
+	int i;
+	char c;
+}BIG;
+
+typedef int INT;
+// int의 새로운 이름으로 간주, 재정의
+
+typedef struct NewStruct
+{
+	int a;
+	short s;
+} NEWST;
+
+
+
+int main()
+{
+	// 배열 초기화 부분 나머지는 초기화 0
+	int array[10] = { 1, 2, 3, 4, 5, 6 };
+	
+
+	/* <구조체> */
+	// 정수자리, 실수자리 따로 초기값 설정 가능
+	MYST t = {100, 3.14f};
+	t.a = 10;
+	t.f = 10.2312f;
+
+	int iSize = sizeof(MYST);
+
+	INT a;
+
+	// NEWST a;
+
+	return 0;
+}

@@ -38,12 +38,12 @@ using namespace std;
 
 	문법: 변수 선언 먼저 -> 대입 연산자
 
-	
+
 
 	*/
 
 
-//전역변수
+	//전역변수
 int global = 0;
 
 
@@ -58,15 +58,15 @@ int Add(int Left, int Right)
 int main()
 {
 	int i = 0;
-	
+
 	// 1바이트로 양수만 표현
 	// 256가지 -> 양의 정수만 0~255까지
-	unsigned char c = 0; 
-	
-		c = 0; // (초기화, 0으로 밀어줘)
-		c = -1;
-		
-	
+	unsigned char c = 0;
+
+	c = 0; // (초기화, 0으로 밀어줘)
+	c = -1;
+
+
 	// 1바이트로 양수 음수 모두 표현
 	// -128 ~ 0 ~ 127
 	char c1 = 0;
@@ -78,7 +78,7 @@ int main()
 
 
 
-	int a = 4 + (int) 4.0;
+	int a = 4 + (int)4.0;
 
 	/*
 	정수표현 방식과 실수 표현 방식 다름
@@ -89,25 +89,25 @@ int main()
 	*/
 
 	float f = 1.2415f + (float)20;
-		// 1.234f (folat 4바이트)
-		// 1.234 (f X는 double 8바이트 간주)
-	
+	// 1.234f (folat 4바이트)
+	// 1.234 (f X는 double 8바이트 간주)
 
-	/*
-	<연산자>
-	
-	대입연산자  =
-	산술연산자  + - * / %(모듈러스, 나머지, 피연산자가 모두 정수) 
-	증감 연산자 ++ --
 
-	*/
+/*
+<연산자>
+
+대입연산자  =
+산술연산자  + - * / %(모듈러스, 나머지, 피연산자가 모두 정수)
+증감 연산자 ++ --
+
+*/
 
 	int data = 10 + 10;
 	// data = data + 20;
-	data += 20; 
+	data += 20;
 	// += 더해서 = 마감 꼭 필요
 
-	
+
 	data = (int)(10. / 3.);
 
 	data = 0;
@@ -143,7 +143,7 @@ int main()
 	*/
 
 	bool TrueFalse = false;
-	
+
 	bool IsTrue = 100;
 
 	IsTrue = true;
@@ -153,14 +153,14 @@ int main()
 	iTrue = !iTrue;
 
 	iTrue = 100 && 200; // 참, 1
-		iTrue = 0 && 200; // 거짓, 0
+	iTrue = 0 && 200; // 거짓, 0
 
 	iTrue = 0 || 300; // 하나만 참이어도 참, 1
-		iTrue = 0 || 0; // 둘다 거짓, 0
+	iTrue = 0 || 0; // 둘다 거짓, 0
 
 
 	/*
-	
+
 	<비교 연산자>
 	 ==, !=, <, >, <=, >=
 	// 참, 거짓 대답
@@ -170,7 +170,7 @@ int main()
 
 
 	/*
-	* 
+	*
 	<구문>
 
 	//if, else
@@ -195,7 +195,7 @@ int main()
 	{
 		// if가 거짓인 경우에 수행
 	}
-	
+
 	//if, else if
 	/*
 	* if, else if
@@ -237,7 +237,7 @@ int main()
 	default:
 		break;
 	}
-	
+
 
 	if (iTest == 10)	//case 10: break;
 	{
@@ -253,8 +253,8 @@ int main()
 	}
 
 	if (iTest == 10 || iTest == 20 || iTest == 30)	//case 10 case 20 case 30 : break;
-				// 1	or			0				0
-				// 셋 중 하나만 걸려도 참으로 인식
+		// 1	or			0				0
+		// 셋 중 하나만 걸려도 참으로 인식
 	{
 
 	}
@@ -266,7 +266,7 @@ int main()
 	iTest == 20 ? iTest = 100 : iTest = 200;
 	// 참이면	-> 수행
 	// 거짓이면						-> 수행
-	
+
 	// 아래 if문이랑 같음. 가독성 문제 생김
 
 	if (iTest == 20)
@@ -285,7 +285,7 @@ int main()
 
 	unsigned char byte = 1;
 	byte <<= 1; // 0000 0001 -> 0000 0010 (전체에서 2배)
-				// 축약: byte = byte << 1;
+	// 축약: byte = byte << 1;
 	byte <<= 2; // 4배
 	byte <<= 3; // 8배
 
@@ -308,7 +308,7 @@ int main()
 
 
 	unsigned int iStatus = 0;		// 32bit = 4byte, 경우의 수 2^32
-	
+
 
 	// <상태 추가>
 	iStatus |= HUNGRY;
@@ -358,17 +358,6 @@ int main()
 		// 기능 하나하나
 	data = Add(10, 20);
 
-
-
-
-
-
-
-
-
-
-
-		 
 	return 0;
 
 
